@@ -8,11 +8,11 @@ class DeviceList {
 
     fun addDevice(device: BluetoothDevice): Boolean {
         // contains compares devices by their address
-        if (!devices.contains(device)) {
+        return if (!devices.contains(device)) {
             devices.add(device)
-            return true
+            true
         } else {
-            return false
+            false
         }
     }
 
